@@ -1,59 +1,225 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🏥 Hospital Management System (HMS)
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+A modern Hospital Management System built with Laravel, designed to streamline hospital operations through role-based access for Administrators, Doctors, and Patients.
 
-## About Laravel
+---
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 🚀 Features
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### 👨‍💼 Admin Panel
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+* Dashboard with analytics and charts
+* Manage Doctors
+* Manage Patients
+* Manage Appointments
+* Manage Specializations
+* View Reports
+* System Notifications
 
-## Learning Laravel
+### 👨‍⚕️ Doctor Panel
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+* Doctor Dashboard
+* Manage Appointments
+* View Assigned Patients
+* Create Medical Records
+* Manage Schedule & Availability
+* Upload Digital Signature
+* Profile Management
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### 👤 Patient Panel
 
-## Laravel Sponsors
+* Patient Dashboard
+* Book Appointments
+* Secure Online Payment
+* View Appointment History
+* Download Invoices
+* View Medical Records
+* Manage Health Profile
+* Receive Notifications
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### 🤖 AI Assistant
 
-### Premium Partners
+* Role-based HMS Assistant
+* Appointment Guidance
+* Medical Record Assistance
+* Invoice Support
+* General Health Education
+* Suggested Quick Actions
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+### 💳 Payment Integration
 
-## Contributing
+* Razorpay Payment Gateway
+* Secure Appointment Payments
+* Payment Tracking
+* Invoice Generation
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### 📄 PDF Generation
 
-## Code of Conduct
+* Appointment Invoices
+* Medical Reports
+* Doctor Signature Support
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### 🔔 Notifications
 
-## Security Vulnerabilities
+* Appointment Updates
+* Booking Confirmations
+* Medical Record Alerts
+* Read/Unread Tracking
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+---
 
-## License
+## 🛠 Technology Stack
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### Backend
+
+* Laravel 12
+* PHP 8.2
+* MySQL
+
+### Frontend
+
+* Blade Templates
+* JavaScript
+* CSS3
+* Vite
+
+### APIs & Services
+
+* Groq AI API
+* Razorpay Payment Gateway
+
+---
+
+## 📂 User Roles
+
+### Admin
+
+* Full system access
+* Doctor management
+* Patient management
+* Appointment monitoring
+* Reports and analytics
+
+### Doctor
+
+* Appointment handling
+* Patient management
+* Medical records
+* Schedule management
+
+### Patient
+
+* Appointment booking
+* Payments
+* Medical records access
+* Profile management
+
+---
+
+## ⚙️ Installation
+
+### Clone Repository
+
+```bash
+git clone https://github.com/Arnxb007/Hospital_Management_System
+cd hospital-management-system
+```
+
+### Install Dependencies
+
+```bash
+composer install
+npm install
+```
+
+### Environment Setup
+
+```bash
+cp .env.example .env
+php artisan key:generate
+```
+
+Configure:
+
+```env
+DB_DATABASE=
+DB_USERNAME=
+DB_PASSWORD=
+
+GROQ_API_KEY=
+
+RAZORPAY_KEY_ID=
+RAZORPAY_KEY_SECRET=
+```
+
+### Database
+
+```bash
+php artisan migrate
+```
+
+or import the provided SQL backup.
+
+### Storage Link
+
+```bash
+php artisan storage:link
+```
+
+### Build Assets
+
+```bash
+npm run build
+```
+
+### Run Application
+
+```bash
+php artisan serve
+```
+
+---
+
+## 📸 Key Modules
+
+* Appointment Management
+* Medical Record System
+* Notification System
+* Patient Health Profile
+* Doctor Scheduling
+* AI Assistant
+* Invoice Management
+* Dashboard Analytics
+
+---
+
+## 🔒 Security Features
+
+* Authentication & Authorization
+* Role-Based Access Control
+* CSRF Protection
+* Secure File Uploads
+* Protected Medical Records
+
+---
+
+## 📈 Future Enhancements
+
+* Email Notifications
+* SMS Alerts
+* Telemedicine Support
+* Multi-Hospital Management
+* Mobile Application
+* Advanced Analytics
+
+---
+
+## 👨‍💻 Developer
+
+Developed as a full-stack healthcare management solution using Laravel and modern web technologies.
+
+---
+
+## 📜 License
+
+This project is intended for educational, academic, and portfolio purposes.
