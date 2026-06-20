@@ -1,147 +1,219 @@
-# 🏥 Hospital Management System (HMS)
+# 🏥 Hospital Management System
 
-A modern Hospital Management System built with Laravel, designed to streamline hospital operations through role-based access for Administrators, Doctors, and Patients.
+A full-featured Hospital Management System built with Laravel, MySQL, and modern web technologies. The platform streamlines hospital operations by providing dedicated dashboards for Administrators, Doctors, and Patients while integrating AI assistance, secure online payments, medical record management, and PDF reporting.
 
----
-
-## 🚀 Features
-
-### 👨‍💼 Admin Panel
-
-* Dashboard with analytics and charts
-* Manage Doctors
-* Manage Patients
-* Manage Appointments
-* Manage Specializations
-* View Reports
-* System Notifications
-
-### 👨‍⚕️ Doctor Panel
-
-* Doctor Dashboard
-* Manage Appointments
-* View Assigned Patients
-* Create Medical Records
-* Manage Schedule & Availability
-* Upload Digital Signature
-* Profile Management
-
-### 👤 Patient Panel
-
-* Patient Dashboard
-* Book Appointments
-* Secure Online Payment
-* View Appointment History
-* Download Invoices
-* View Medical Records
-* Manage Health Profile
-* Receive Notifications
-
-### 🤖 AI Assistant
-
-* Role-based HMS Assistant
-* Appointment Guidance
-* Medical Record Assistance
-* Invoice Support
-* General Health Education
-* Suggested Quick Actions
-
-### 💳 Payment Integration
-
-* Razorpay Payment Gateway
-* Secure Appointment Payments
-* Payment Tracking
-* Invoice Generation
-
-### 📄 PDF Generation
-
-* Appointment Invoices
-* Medical Reports
-* Doctor Signature Support
-
-### 🔔 Notifications
-
-* Appointment Updates
-* Booking Confirmations
-* Medical Record Alerts
-* Read/Unread Tracking
+![Laravel](https://img.shields.io/badge/Laravel-12-red)
+![PHP](https://img.shields.io/badge/PHP-8.2+-blue)
+![MySQL](https://img.shields.io/badge/MySQL-Database-orange)
+![License](https://img.shields.io/badge/License-MIT-green)
 
 ---
 
-## 🛠 Technology Stack
+## 🌐 Live Demo
 
-### Backend
+**Production URL**
 
-* Laravel 12
-* PHP 8.2
-* MySQL
-
-### Frontend
-
-* Blade Templates
-* JavaScript
-* CSS3
-* Vite
-
-### APIs & Services
-
-* Groq AI API
-* Razorpay Payment Gateway
+https://hms-portal.ddns.net
 
 ---
 
-## 📂 User Roles
+## ✨ Key Highlights
 
-### Admin
+* Multi-role authentication system
+* Admin, Doctor, and Patient dashboards
+* AI-powered healthcare assistant
+* Online appointment booking
+* Razorpay payment integration
+* Medical record management
+* Doctor scheduling system
+* Notification center
+* PDF invoice generation
+* Medical report export
+* Responsive mobile-friendly design
+* AWS EC2 deployment
 
-* Full system access
-* Doctor management
-* Patient management
-* Appointment monitoring
-* Reports and analytics
+---
+
+# 📸 Screenshots
+
+## 🏠 Home Page
+
+![Home Page](screenshots/index.png)
+
+---
+
+## 👨‍💼 Admin Panel
+
+### Admin Dashboard
+
+![Admin Dashboard](screenshots/admin_dash.png)
+
+### Appointment Management
+
+![Admin Appointments](screenshots/appointment_admin.png)
+
+---
+
+## 👨‍⚕️ Doctor Panel
+
+### Doctor Dashboard
+
+![Doctor Dashboard](screenshots/doctor_dash.png)
+
+### Appointment Management
+
+![Doctor Appointments](screenshots/appointment_doctor.png)
+
+---
+
+## 👤 Patient Panel
+
+### Patient Dashboard
+
+![Patient Dashboard](screenshots/patient_dash.png)
+
+### Appointment Booking & History
+
+![Patient Appointments](screenshots/appointment_patient.png)
+
+### Medical Records
+
+![Medical Records](screenshots/medical_record.png)
+
+---
+
+## 🤖 AI Assistant
+
+The integrated AI assistant helps patients navigate the system, understand appointments, and receive healthcare guidance.
+
+![AI Assistant](screenshots/ai.png)
+
+---
+
+## 💳 Online Payment Integration
+
+Secure appointment payments powered by Razorpay.
+
+![Razorpay Payment](screenshots/razorpay.png)
+
+---
+
+# 🏗 System Architecture
+
+### Administrator
+
+* Manage doctors
+* Manage patients
+* Manage appointments
+* Manage specializations
+* View analytics
+* Generate reports
 
 ### Doctor
 
-* Appointment handling
-* Patient management
-* Medical records
-* Schedule management
+* Manage appointments
+* Create medical records
+* Upload signature
+* Manage availability
+* View patient history
 
 ### Patient
 
-* Appointment booking
-* Payments
-* Medical records access
-* Profile management
+* Book appointments
+* Pay online
+* View medical records
+* Download invoices
+* Receive notifications
 
 ---
 
-## ⚙️ Installation
+# 🤖 AI Assistant
 
-### Clone Repository
+The system includes an AI-powered assistant integrated using the Groq API.
+
+### Capabilities
+
+* Appointment guidance
+* Patient support
+* Medical record assistance
+* Health education
+* Quick action suggestions
+* Hospital navigation help
+
+---
+
+# 💳 Payment System
+
+Integrated with Razorpay for secure online transactions.
+
+### Features
+
+* Appointment payments
+* Payment verification
+* Transaction tracking
+* Invoice generation
+
+---
+
+# 🛠 Technology Stack
+
+## Backend
+
+* Laravel 12
+* PHP 8.2+
+* MySQL
+
+## Frontend
+
+* Blade Templates
+* CSS3
+* JavaScript
+* Vite
+
+## APIs & Services
+
+* Groq AI API
+* Razorpay API
+
+## Infrastructure
+
+* AWS EC2
+* Apache2
+* Ubuntu Server
+
+---
+
+# 🚀 Installation Guide
+
+## 1. Clone Repository
 
 ```bash
-git clone https://github.com/Arnxb007/Hospital_Management_System
-cd hospital-management-system
+git clone https://github.com/Arnxb007/Hospital_Management_System.git
+
+cd Hospital_Management_System
 ```
 
-### Install Dependencies
+## 2. Install Dependencies
 
 ```bash
 composer install
+
 npm install
 ```
 
-### Environment Setup
+## 3. Configure Environment
 
 ```bash
 cp .env.example .env
+
 php artisan key:generate
 ```
 
-Configure:
+Update the following values:
 
 ```env
+APP_NAME="Hospital Management System"
+
 DB_DATABASE=
 DB_USERNAME=
 DB_PASSWORD=
@@ -152,74 +224,89 @@ RAZORPAY_KEY_ID=
 RAZORPAY_KEY_SECRET=
 ```
 
-### Database
+## 4. Database Setup
+
+Using migrations:
 
 ```bash
 php artisan migrate
 ```
 
-or import the provided SQL backup.
+Or import SQL backup:
 
-### Storage Link
+```bash
+mysql -u username -p database_name < hospital_management.sql
+```
+
+## 5. Storage Link
 
 ```bash
 php artisan storage:link
 ```
 
-### Build Assets
+## 6. Build Frontend Assets
+
+Development:
+
+```bash
+npm run dev
+```
+
+Production:
 
 ```bash
 npm run build
 ```
 
-### Run Application
+## 7. Start Application
 
 ```bash
 php artisan serve
 ```
 
----
+Application:
 
-## 📸 Key Modules
-
-* Appointment Management
-* Medical Record System
-* Notification System
-* Patient Health Profile
-* Doctor Scheduling
-* AI Assistant
-* Invoice Management
-* Dashboard Analytics
+```text
+http://127.0.0.1:8000
+```
 
 ---
 
-## 🔒 Security Features
+# 🔒 Security Features
 
-* Authentication & Authorization
-* Role-Based Access Control
+* Authentication
+* Role-Based Authorization
 * CSRF Protection
+* Input Validation
 * Secure File Uploads
 * Protected Medical Records
 
 ---
 
-## 📈 Future Enhancements
+# 📈 Future Roadmap
 
 * Email Notifications
 * SMS Alerts
-* Telemedicine Support
-* Multi-Hospital Management
+* Telemedicine Module
 * Mobile Application
+* Multi-Hospital Support
 * Advanced Analytics
+* Doctor Video Consultation
 
 ---
 
-## 👨‍💻 Developer
+# 👨‍💻 Developer
 
-Developed as a full-stack healthcare management solution using Laravel and modern web technologies.
+Arnab
+
+Computer Science Engineering Student
+
+Focused on building secure, scalable, and practical healthcare management solutions using Laravel and modern web technologies.
 
 ---
 
-## 📜 License
+# 📜 License
 
-This project is intended for educational, academic, and portfolio purposes.
+Licensed under the MIT License.
+
+See the LICENSE file for more information.
