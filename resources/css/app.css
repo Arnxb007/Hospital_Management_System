@@ -2678,6 +2678,7 @@ input:focus{
     bottom:100px;
     right:24px;
     width:380px;
+    max-width: 420px;
     height:520px;
     background:#fff;
     border-radius:20px;
@@ -3006,4 +3007,52 @@ input:focus{
     padding:8px;
     border-radius:10px;
     margin-bottom:8px;
+}
+/* Mobile & Tablet Responsive */
+
+@media (max-width: 768px) {
+
+    #ai-chatbox {
+        width: calc(100vw - 20px);
+        height: 80vh;
+        max-width: none;
+        right: 10px;
+        left: 10px;
+        bottom: 10px;
+    }
+
+    #ai-messages {
+        height: calc(80vh - 140px);
+        overflow-y: auto;
+    }
+
+    .ai-input-row {
+        display: flex;
+        gap: 8px;
+    }
+
+    #ai-input {
+        flex: 1;
+        min-width: 0;
+    }
+
+    #ai-send {
+        flex-shrink: 0;
+    }
+}
+
+@media (max-width: 480px) {
+
+    #ai-chatbox {
+        width: calc(100vw - 10px);
+        height: 85vh;
+        right: 5px;
+        left: 5px;
+        bottom: 5px;
+    }
+
+    #ai-bot {
+        right: 15px;
+        bottom: 15px;
+    }
 }

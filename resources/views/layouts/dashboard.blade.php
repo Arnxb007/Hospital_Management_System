@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title')</title>
-
+    <link rel="icon" type="image/png" href="{{ asset('images/favicon.png') }}">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <div id="ai-bot">
@@ -109,7 +109,9 @@
 
         <div class="sidebar-brand">
             <a href="{{ route('home') }}" class="logo" aria-label="Open hospital home page">
-                HMS
+               <img src="{{ asset('images/hms-logo.png') }}"
+     alt="HMS Logo"
+     style="height:80px;width:auto;display:block;margin:auto;">
             </a>
             <span class="brand-pulse"></span>
         </div>
